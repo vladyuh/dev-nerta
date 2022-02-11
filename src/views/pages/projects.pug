@@ -1,0 +1,87 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Главная"
+
+block content
+    section.pageBanner.without-description
+        .inner
+            picture.pageBanner__bg
+                //source(srcset="../img/projects/banner.webp" type="image/webp")
+                img(src="../img/projects/banner.jpg", alt="Баннер")
+            .pageBanner__content
+                h1.pageBanner__title Проекты и отзывы
+            .breadcrumbs
+                    a(href='https://nerta-sw.ru') Главная
+                    span Проекты
+    section.projects
+        .inner
+            .projects__items
+                .projects__item
+                    .image
+                        img(src="../img/projects/1.jpg", alt="" loading="lazy")
+                    .name 7 из 14 моек самообслуживания в Пскове работают на оборудовании “Нерта”
+                    .list
+                        .list-item
+                            .desc Чистая прибыль за год
+                            .value 2 миллиона рублей
+                        .list-item
+                            .desc Средняя выручка в месяц
+                            .value 700 тысяч рублей
+                    .more
+                        a(href="project-detail.html") Узнать подробнее
+                .projects__item
+                    .image
+                        img(src="../img/projects/2.jpg", alt="" loading="lazy")
+                    .name Красная Мойка, г. Реутов
+                    .list
+                        .list-item
+                            .desc Чистая прибыль за год
+                            .value 2 миллиона рублей
+                        .list-item
+                            .desc Средняя выручка в месяц
+                            .value 700 тысяч рублей
+                    .more
+                        a(href="project-detail.html") Узнать подробнее
+                .projects__item
+                    .image
+                        img(src="../img/projects/4.jpg", alt="" loading="lazy")
+                    .name 7 лет стабильного сотрудничества
+                    .list
+                        .list-item
+                            .desc Чистая прибыль за год
+                            .value 2 миллиона рублей
+                        .list-item
+                            .desc Средняя выручка в месяц
+                            .value 700 тысяч рублей
+                    .more
+                        a(href="project-detail.html") Узнать подробнее
+                .projects__item
+                    .image
+                        img(src="../img/projects/3.jpg", alt="" loading="lazy")
+                    .name МойExpress: 3 мойки самообслуживания в г.Березовском
+                    .list
+                        .list-item
+                            .desc Чистая прибыль за год
+                            .value 2 миллиона рублей
+                        .list-item
+                            .desc Средняя выручка в месяц
+                            .value 700 тысяч рублей
+                    .more
+                        a(href="project-detail.html") Узнать подробнее
+    section.formQuestions
+        .inner
+            .formQuestions__left
+                .formQuestions__title Остались вопросы?
+                .formQuestions__desc Звоните или оставляйте заявку на сайте. Мы ответим на все интересующие вас вопросы!
+            .formQuestions__right
+                form.form-component.formQuestions__form(action="")
+                    .form__field
+                        input(type="text", name="" placeholder="Имя")
+                    .form__field
+                        input(type="tel", name="" placeholder="+7 (9__) ___ __ __")
+                    .form__submit
+                        button(type="submit") Оставить заявку
+block scripts
+    script(src="js/main.js")

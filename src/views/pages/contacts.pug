@@ -1,0 +1,179 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Главная"
+
+block content
+    section.pageBanner.without-description
+        .inner
+            picture.pageBanner__bg
+                //source(srcset="../img/contacts/banner.webp" type="image/webp")
+                img(src="../img/contacts/baner.jpg", alt="Баннер")
+            .pageBanner__content
+                h1.pageBanner__title Контакты
+            .breadcrumbs
+                a(href='https://nerta-sw.ru') Главная
+                span Контакты
+    section.contacts
+        .inner
+            .contacts__item
+                .office Офис в Москве
+                .contacts__itemLeft                    
+                    .info-item
+                        .info-name Телефоны для связи
+                        .info-value: a(href="#") 8 (800) 555-25-93
+                        .info-value: a(href="#") +7 (495) 6-777-000
+                    .info-item
+                        .info-name Режим работы
+                        .info-value пн.-пт.: 10:00 - 19:00
+                        .info-value сб. - вс.: выходные дни
+                    .info-item
+                        .info-name Адрес офиса
+                        .info-value Россия, Московская область, Остаповский проезд, 3, стр. 5
+                    .info-item
+                        .info-name Email
+                        .info-value: a(href="#") info@nerta-sw.ru
+                    .info-item
+                        .info-name Адрес производства
+                        .info-value Россия, Московская область, Остаповский проезд, 3, стр. 5
+                .contacts__itemRight
+                    .map-container
+                        iframe(loading='lazy' src='https://yandex.by/map-widget/v1/-/CCU5BAa~oA' allowfullscreen='true' width='100%' height='100%' frameborder='1')
+            .contacts__item
+                .office Представительство в Казани
+                .contacts__itemLeft                    
+                    .info-item
+                        .info-name Телефоны для связи
+                        .info-value: a(href="#") +7 (960) 053-55-55​
+                    .info-item
+                        .info-name Режим работы
+                        .info-value пн.-пт.: 10:00 - 19:00
+                        .info-value сб. - вс.: выходные дни
+                    .info-item
+                        .info-name Адрес офиса
+                        .info-value 4200111, г. Казань, Кремлёвская 2а​
+                    .info-item
+                        .info-name Email
+                        .info-value: a(href="#") avp@amsw.ru
+                .contacts__itemRight
+                    .map-container
+                        iframe(loading='lazy' src='https://yandex.by/map-widget/v1/-/CCU5BEqMhC' allowfullscreen='true' width='100%' height='100%' frameborder='1')
+            .contacts__item
+                .office Представительство в Екатеринбурге
+                .contacts__itemLeft                    
+                    .info-item
+                        .info-name Телефоны для связи
+                        .info-value: a(href="#") +7 (905) 801-18-88
+                    .info-item
+                        .info-name Режим работы
+                        .info-value пн.-пт.: 10:00 - 19:00
+                        .info-value сб. - вс.: выходные дни
+                    .info-item
+                        .info-name Адрес офиса
+                        .info-value 620034, Екатеринбург, ул. Опалихинская 27а, оф 305​
+                    .info-item
+                        .info-name Email
+                        .info-value: a(href="#") ural@nerta-sw.ru ​
+                .contacts__itemRight
+                    .map-container
+                        iframe(loading='lazy' src='https://yandex.by/map-widget/v1/-/CCU5BEFJlC' allowfullscreen='true' width='100%' height='100%' frameborder='1')
+            .contacts__item
+                .office Представительство в Беларуси
+                .contacts__itemLeft                    
+                    .info-item
+                        .info-name Телефоны для связи
+                        .info-value: a(href="#") +375296569307
+                    .info-item
+                        .info-name Адрес офиса
+                        .info-value Республика Беларусь, г. Кобрин, ул. Николаева 28.  инд 225306 . СООО "САМ и партнёры"
+                .contacts__itemRight
+                    .map-container
+                        iframe(loading='lazy' src='https://yandex.by/map-widget/v1/-/CCU5BECykB' allowfullscreen='true' width='100%' height='100%' frameborder='1')
+    section.informcard
+        .inner
+            .informcard__title ИНФОРМАЦИОННАЯ КАРТОЧКА<br> ООО «КОМПАНИЯ «НЕРТА»
+            .informcard__table
+                .informcard__row.odd
+                    .name Наименование (полное) организации​
+                    .value Общество с ограниченой ответственностью “Компания “Нерта”
+                .informcard__row
+                    .name Сокращенное наименование организации
+                    .value ООО “Компания “Нерта”
+                .informcard__row.odd
+                    .name ОГРН и дата присвоения
+                    .value 1097746684452 05 ноября 2009 года
+                .informcard__row
+                    .name № Свидетельства о государственной регистрации
+                    .value Серия 77 № 013714135
+                .informcard__row.odd
+                    .name № Свидетельства о государственной регистрации
+                    .value Серия 77 № 013714135
+                .informcard__row
+                    .name ИНН/КПП
+                    .value 7718782371/ 772201001
+                .informcard__row.odd
+                    .name Банк и его месторасположение 
+                    .value АО Банк «Развитие-Столица», Москва, Нижний Сусальный пер., д.5, стр. 15
+                .informcard__row
+                    .name БИК
+                    .value 044525984
+                .informcard__row.odd
+                    .name К/с
+                    .value 30101810000000000984
+                .informcard__row
+                    .name Р/с
+                    .value 40702810500010008128
+                .informcard__row.odd
+                    .name Код по ОКПО
+                    .value 63752971
+                .informcard__row
+                    .name Код по ОКОГУ
+                    .value 49013
+                .informcard__row.odd
+                    .name Код по ОКТМО
+                    .value 45392000
+                .informcard__row
+                    .name Код по ОКФС
+                    .value 16
+                .informcard__row.odd
+                    .name Код по ОКОПФ
+                    .value 65
+                .informcard__row
+                    .name Юридический адрес организации
+                    .value 109316, город Москва, Проезд Остаповский, дом 3, строение 5, офис 211
+                .informcard__row.odd
+                    .name Фактический адрес организации
+                    .value 109316, город Москва, Проезд Остаповский, дом 3, строение 5, офис 211
+                .informcard__row
+                    .name Почтовый адрес
+                    .value 109316, город Москва, Проезд Остаповский, дом 3, строение 5, офис 211
+                .informcard__row.odd
+                    .name ФИО Генерального директора
+                    .value Сергеев Сергей Владимирович (на основании Устава)
+    section.formQuestions.formContacts
+        .inner
+            .formQuestions__left
+                .formQuestions__title Остались вопросы?
+                .formQuestions__desc Звоните или оставляйте заявку на сайте. Мы ответим на все интересующие вас вопросы!
+            .formQuestions__right
+                form.form-component.formQuestions__form(action="")
+                    .form__field
+                        input(type="text", name="" placeholder="Как к вам обращаться?")
+                    .form__field
+                        input(type="tel", name="" placeholder="Телефон")
+                    .form__field
+                        input(type="email", name="" placeholder="Куда направлять ответ?")
+                    .form__field
+                        input(type="text", name="" placeholder="Где планируете мойку?")
+                    .form__field
+                        input(type="text", name="" placeholder="Чем мы можем вам помочь?")                     
+                    .form__submit
+                        button(type="submit") Отправить
+                    .form__accept
+                        label
+                            input(type="checkbox", name="")
+                            span я принимаю <a href="#">политику конфиденциальности</a>
+                            
+block scripts
+    script(src="js/main.js")

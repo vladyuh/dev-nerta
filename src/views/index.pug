@@ -1,0 +1,79 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+    - const title = "Главная"
+
+block content
+    section.pageBanner
+        .inner
+            picture.pageBanner__bg
+                source(srcset="../img/article/banner.webp" type="image/webp")
+                img(src="../img/article/banner.jpg", alt="Баннер")
+            .pageBanner__content
+                h1.pageBanner__title CТАТЬИ ПРО МОЙКИ<br> САМООБСЛУЖИВАНИЯ
+                .pageBanner__desc. 
+                                В данном разделе вы  найдете информацию связанную с организацией и развитием
+                                моек самообслуживания. Делимся накопленным , с 2001 года опытом
+            .breadcrumbs
+                    a(href='https://nerta-sw.ru') Главная
+                    span Статьи
+    section.articles
+        .inner
+            .articles__head
+                .articles__headName Статьи
+                .articles__headSort
+                    span Сортировка:
+                    form(action="")
+                        select(name="year")
+                            option(value="Год" disabled selected) Год
+                            option(value="2022") 2022
+                        select(name="topic")
+                            option(value="Тематика" disabled selected) Тематика
+                            option(value="Покупка") Покупка
+            .articles__items
+                a(href="article-detail.html").articles__item
+                    .image
+                        img(src="../img/article/article-1.jpg", alt="" loading="lazy")
+                    .name Как открыть автомойку самообслуживания
+                    .date 12.01.2022
+                a(href="article-detail.html").articles__item
+                    .image
+                        img(src="../img/article/article-2.jpg", alt="" loading="lazy")
+                    .name Выбор, покупка и монтаж моечного оборудования
+                    .date 12.01.2022
+                a(href="article-detail.html").articles__item
+                    .image
+                        img(src="../img/article/article-3.jpg", alt="" loading="lazy")
+                    .name Для тех кто собирает мойку самостоятельно, на своих компонентах.
+                    .date 12.01.2022
+                a(href="article-detail.html").articles__item
+                    .image
+                        img(src="../img/article/article-3.jpg", alt="" loading="lazy")
+                    .name Для тех кто собирает мойку самостоятельно, на своих компонентах.
+                    .date 12.01.2022
+                a(href="article-detail.html").articles__item
+                    .image
+                        img(src="../img/article/article-1.jpg", alt="" loading="lazy")
+                    .name Как открыть автомойку самообслуживания
+                    .date 12.01.2022
+                a(href="article-detail.html").articles__item
+                    .image
+                        img(src="../img/article/article-2.jpg", alt="" loading="lazy")
+                    .name Выбор, покупка и монтаж моечного оборудования
+                    .date 12.01.2022
+    section.formQuestions
+        .inner
+            .formQuestions__left
+                .formQuestions__title Остались вопросы?
+                .formQuestions__desc Звоните или оставляйте заявку на сайте. Мы ответим на все интересующие вас вопросы!
+            .formQuestions__right
+                form.form-component.formQuestions__form(action="")
+                    .form__field
+                        input(type="text", name="" placeholder="Имя")
+                    .form__field
+                        input(type="tel", name="" placeholder="+7 (9__) ___ __ __")
+                    .form__submit
+                        button(type="submit") Оставить заявку
+block scripts
+    script(src="js/main.js")

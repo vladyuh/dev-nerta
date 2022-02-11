@@ -1,0 +1,183 @@
+section.contacts {
+  padding: 52px 0 80px;
+}
+
+.contacts__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1025px) {
+
+    &Left,
+    &Right {
+      width: 50%;
+    }
+
+    &Right {
+      max-width: 532px;
+    }
+  }
+
+  &Left,
+  &Right {
+    width: 100%;
+  }
+
+
+
+  &Left {
+    display: flex;
+    flex-wrap: wrap;
+
+    .info-item {
+      width: 100%;
+      padding-right: 0px;
+      padding-bottom: 36px;
+
+      @media screen and (min-width: 400px) {
+        width: 50%;
+        padding-right: 62px;
+      }
+
+    }
+
+    .info-name {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: bold;
+      margin-bottom: 9px;
+    }
+
+    .info-value {
+      margin-bottom: 9px;
+    }
+
+    .info-value,
+    .info-value a {
+      font-size: 15px;
+      line-height: 20px;
+      color: #000;
+    }
+
+  }
+
+  &Right {
+    .map-container {
+      position: relative;
+      padding-top: 281px / 532px * 100%;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .office {
+    width: 100%;
+    font-size: 30px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #242B30;
+    font-weight: bold;
+    margin-bottom: 41px;
+
+    @media screen and (min-width: 425px) {
+      font-size: 40px;
+    }
+
+  }
+}
+
+.informcard {
+  padding-bottom: 76px;
+  &__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #242B30;
+    margin-bottom: 38px;
+
+    @media screen and (min-width: 425px) {
+      font-size: 40px;
+    }
+
+  }
+
+  &__row {
+    margin-bottom: 10px;
+    background: #F1F1F1;
+    padding: 11px 23px 12px 13px;
+  }
+
+  .name{
+    margin-bottom: 5px;
+  }
+
+  .value,
+  .name {
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: normal;    
+  }
+
+  @media screen and (min-width: 641px){
+    &__row{
+      padding: 0;
+      margin-bottom: 0;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    &__row.odd{
+      .value,
+      .name{
+        background: #F1F1F1;
+      }
+    }
+
+    .value,
+    .name{
+      padding: 11px 23px 12px 13px;
+      width: calc(50% - 3px);
+      margin: 0;
+    }
+  }
+
+}
+
+.formContacts{
+  background: #fff;
+
+  .inner{
+    align-items: flex-start;
+  }
+
+  .formQuestions__right{
+    max-width: 547px;
+    padding: 20px;
+    background: #F1F1F1;
+
+    @media screen and (min-width: 641px){
+      padding: 50px;
+    }
+
+
+    button[type="submit"]{
+      font-weight: bold;
+    }
+
+  }
+
+
+
+}
